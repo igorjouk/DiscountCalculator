@@ -30,7 +30,7 @@ namespace DiscountСalculator.Discounts
         }
         public double ApplyDiscount(double productPrice)
         {
-            throw new NotImplementedException();
+            return productPrice - productPrice * PercentDiscount / 100;
         }
     }
 }
