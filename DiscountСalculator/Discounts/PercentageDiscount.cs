@@ -14,7 +14,7 @@ namespace DiscountСalculator.Discounts
             get { return _percentDiscount; }
             set
             {
-                if (_percentDiscount > 0 && _percentDiscount < 100)
+                if (value > 0 && value < 100)
                 {
                     _percentDiscount = value;
                 }
