@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiscountСalculator.Discounts
 {
-    class PercentageDiscount : IDiscount
+    class PercentageDiscountCard : IDiscount
     {
         private double _percentDiscount;
         public double PercentDiscount
@@ -24,7 +24,7 @@ namespace DiscountСalculator.Discounts
                 }
             }
         }
-        public PercentageDiscount(double percentDiscount)
+        public PercentageDiscountCard(double percentDiscount)
         {
             PercentDiscount = percentDiscount;
         }

@@ -59,7 +59,7 @@
   <ItemGroup>
     <Compile Include="Discounts\GiftCardDiscount.cs" />
     <Compile Include="Discounts\IDiscount.cs" />
-    <Compile Include="Discounts\PercentageDiscount.cs" />
+    <Compile Include="Discounts\PercentageDiscountCard.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
