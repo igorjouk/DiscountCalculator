@@ -1,9 +1,10 @@
-﻿using System;
+﻿using DiscountСalculator.Discounts;
+using System;
 
 namespace DiscountСalculator
 {
     class Program
-    {
+    {        
         static void Main(string[] args)
         {
             Console.WriteLine("Вы хотите добавить новый продукт? 1 - да, 2 - нет");
@@ -12,7 +13,7 @@ namespace DiscountСalculator
 
             if (answer != 1)
                 return;
-
+            
             CreateProduct();
 
             Console.ReadLine();
@@ -39,38 +40,11 @@ namespace DiscountСalculator
 
             product.Price = price;
 
-            Console.WriteLine("Введите значение скидки на товар (в % от общей стоимости)");
+            Console.WriteLine("Выберите тип дисконтной карты: 1 - ");
 
             int.TryParse(Console.ReadLine(), out var discountValue);
-
-            while (discountValue > 100)
-            {
-                Console.WriteLine("Значение скидки не может быть больше 100");
-
-                int.TryParse(Console.ReadLine(), out discountValue);
-            }
-
-            product.DiscountValue = discountValue;
-
-            Console.WriteLine("Введите дату начала действия скидки");
-
-            DateTime.TryParse(Console.ReadLine(), out var startSellDate);
-
-            if (startSellDate != DateTime.MinValue)
-            {
-                product.StartSellDate = startSellDate;
-            }
-
-            Console.WriteLine("Введите дату окончания действия скидки");
-
-            DateTime.TryParse(Console.ReadLine(), out var endSellDate);
-
-            if (endSellDate != DateTime.MinValue)
-            {
-                product.EndSellDate = endSellDate;
-            }
-
-            Console.WriteLine($"Вы успешно добавили новый продукт: {product.Name}, стоимость - {product.Price}р. {product.GetSellInformation()}");
+           
+            //Console.WriteLine($"Вы успешно добавили новый продукт: {product.Name}, стоимость - {product.Price}р. {product.GetSellInformation()}");
         }
     }
 }
