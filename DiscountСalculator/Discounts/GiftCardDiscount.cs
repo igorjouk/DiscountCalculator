@@ -8,10 +8,23 @@ namespace DiscountСalculator.Discounts
 {
     class GiftCardDiscount : IDiscount
     {
-        public DateTime Validity { get; set; }
+        private int _giftAmount;
+        private DateTime Validity { get; set; }
+
+        public GiftCardDiscount(int giftAmount, DateTime validity)
+        {
+            _giftAmount = giftAmount;
+            Validity = validity;
+        }
+
         public double ApplyDiscount(double productPrice)
         {
-            throw new NotImplementedException();
+            return productPrice - _giftAmount;
+        }
+
+        public bool CheckDiscountValidity(DateTime date)
+        {
+            return date <= DateTime.Now;
         }
     }
 }
